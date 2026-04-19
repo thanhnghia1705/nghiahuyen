@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-romance-grid text-slate-900 antialiased;
+}
+
+* {
+  @apply border-slate-200;
+}
+
+.glass-panel {
+  @apply border border-white/60 bg-white/70 backdrop-blur-xl shadow-soft;
+}
+
+.section-shell {
+  @apply rounded-[32px] border border-white/60 bg-white/70 backdrop-blur-xl shadow-soft;
+}
+
+.hero-mesh::before,
+.hero-mesh::after {
+  content: "";
+  position: absolute;
+  inset: auto;
+  border-radius: 9999px;
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-mesh::before {
+  width: 20rem;
+  height: 20rem;
+  top: -5rem;
+  left: -4rem;
+  background: rgba(239, 157, 184, 0.30);
+}
+
+.hero-mesh::after {
+  width: 18rem;
+  height: 18rem;
+  bottom: -4rem;
+  right: -4rem;
+  background: rgba(197, 157, 88, 0.15);
+}
+
+.pretty-scrollbar::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+.pretty-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(220, 113, 151, 0.35);
+  border-radius: 9999px;
+}
+
+.pretty-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.bg-grid-soft {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.35) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: .65;
+  cursor: pointer;
+}
